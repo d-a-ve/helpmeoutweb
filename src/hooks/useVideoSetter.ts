@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import { VideoSetterContext } from "@context/VideoDetailsContext";
+import { VideoDetailsSetterContext } from "@context/VideoDetailsContext";
 
 const useVideoSetter = () => {
-  const setVideoId = useContext(VideoSetterContext);
+  const setVideoDetails = useContext(VideoDetailsSetterContext);
 
-  return { setVideoId };
+  return { setVideoDetails };
 };
 
 export default useVideoSetter;

@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
 
+import useFetch from "@hooks/useFetch";
 import useModalSetter from "@hooks/useModalSetter";
+import useVideoSetter from "@hooks/useVideoSetter";
 
 import Button from "@components/Button/Button";
 import ButtonWithIcon from "@components/Button/ButtonWithIcon";
 import CopyIcon from "@components/Icons/CopyIcon";
 import Input from "@components/Input/Input";
 import TransparentInput from "@components/Input/TransparentInput";
+import Loader from "@components/Loader/Loader";
 import Modal from "@components/Modal/Modal";
 import Transcript from "@components/Transcript/Transcript";
 import TranscriptCheck from "@components/Transcript/TranscriptCheck";
@@ -32,12 +35,30 @@ const SOCIALS = [
 
 const VideoEdit = () => {
   const { videoId } = useParams();
+  const { setVideoDetails } = useVideoSetter();
   const { setIsModalOpen } = useModalSetter();
+  const { loading, error, fetchData } = useFetch();
   const isLaptop = useMediaQuery({ maxDeviceWidth: 1024 });
 
-  // useEffect()
-  console.log(isLaptop);
+  useEffect(() => {
+    if (videoId) {
+      const fetchVideoDetails = async (id: string) => {
+        const videoDeatils = await fetchData(
+          `https://martdev.tech/screenrecorder/api/videos/${id}`
+        );
 
+        setVideoDetails({
+          id,
+          ...videoDeatils,
+        });
+      };
+      fetchVideoDetails(videoId);
+    }
+  }, [fetchData, setVideoDetails, videoId]);
+
+  if (loading) return <Loader />;
+
+  if (error) return <div>Something went wrong, Please try again</div>;
   return (
     <section className="px-page-layout flex gap-x-10 lg:flex-col">
       <div className="w-1/2 lg:w-full flex flex-col gap-8">

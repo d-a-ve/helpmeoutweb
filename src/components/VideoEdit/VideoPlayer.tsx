@@ -1,6 +1,7 @@
-import React from "react";
+import useVideo from "@hooks/useVideo";
 
 const VideoPlayer = () => {
+  const { videoDetails } = useVideo();
   return (
     <video
       controls
@@ -10,10 +11,7 @@ const VideoPlayer = () => {
       /* width="250" height="150" */
     >
       <source src="my_video.mp4" type="video/mp4" />
-      <source
-        src="https://martdev.tech/screenrecorder/api/videos/651a77e2bfdef94873eed0f5/stream"
-        type="video/webm"
-      />
+      <source src={videoDetails?.downloadLink} type="video/webm" />
       <source src="my_video.ogg" type="video/ogg" />
       Your browser does not support HTML5 video.
     </video>

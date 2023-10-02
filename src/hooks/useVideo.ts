@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import { VideoContext } from "@context/VideoDetailsContext";
+import { VideoDetailsContext } from "@context/VideoDetailsContext";
 
 const useVideo = () => {
-  const videoId = useContext(VideoContext);
+  const videoDetails = useContext(VideoDetailsContext);
 
-  return { videoId };
+  return { videoDetails };
 };
 
 export default useVideo;

@@ -6,21 +6,25 @@ import {
   SetStateAction,
 } from "react";
 
-export const VideoContext = createContext({} as string);
-export const VideoSetterContext = createContext<
-  Dispatch<SetStateAction<string>>
->(undefined as unknown as Dispatch<SetStateAction<string>>);
+import { TVideoDetails } from "@myTypes/TVideoDetails";
 
-const VideoContextProvider = ({ children }: { children: ReactNode }) => {
-  const [videoId, setVideoId] = useState("");
+export const VideoDetailsContext = createContext(
+  {} as TVideoDetails | undefined
+);
+export const VideoDetailsSetterContext = createContext<
+  Dispatch<SetStateAction<TVideoDetails | undefined>>
+>(undefined as unknown as Dispatch<SetStateAction<TVideoDetails | undefined>>);
+
+const VideoDetailsContextProvider = ({ children }: { children: ReactNode }) => {
+  const [videoDetailsId, setVideoDetailsId] = useState<TVideoDetails>();
 
   return (
-    <VideoContext.Provider value={videoId}>
-      <VideoSetterContext.Provider value={setVideoId}>
+    <VideoDetailsContext.Provider value={videoDetailsId}>
+      <VideoDetailsSetterContext.Provider value={setVideoDetailsId}>
         {children}
-      </VideoSetterContext.Provider>
-    </VideoContext.Provider>
+      </VideoDetailsSetterContext.Provider>
+    </VideoDetailsContext.Provider>
   );
 };
 
-export default VideoContextProvider;
+export default VideoDetailsContextProvider;

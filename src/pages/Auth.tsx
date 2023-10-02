@@ -1,5 +1,3 @@
-import React from "react";
-
 import ButtonWithIcon from "@components/Button/ButtonWithIcon";
 import PrimaryButton from "@components/Button/PrimaryButton";
 import { FormHeader } from "@components/Form/FormHeader";

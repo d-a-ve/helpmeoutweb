@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Auth from "@pages/Auth";
+import Dashboard from "@pages/Dashboard";
 import Video from "@pages/Video";
 
 import PageLayout from "@components/Layout/PageLayout";
@@ -14,9 +15,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<PageLayout />}>
-        <Route path="/video/:videoId" element={<Video />} />
+        <Route path="/videos/:videoId" element={<Video />} />
       </Route>
       <Route path="/auth" element={<Auth />} />
+      <Route path="/dashboard/my-videos" element={<Dashboard />} />
     </>
   )
 );

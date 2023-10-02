@@ -1,40 +1,22 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-const LANGUAGES = [
-  {
-    lang: "English",
-    abbr: "eng",
-  },
-  {
-    lang: "Spanish",
-    abbr: "sp",
-  },
-  {
-    lang: "German",
-    abbr: "gm",
-  },
-  {
-    lang: "Italian",
-    abbr: "it",
-  },
-  {
-    lang: "Mandarin",
-    abbr: "md",
-  },
-  {
-    lang: "Arabic",
-    abbr: "ab",
-  },
-];
+// import useVideo from "@hooks/useVideo";
+
+// const LANGUAGES = [
+//   {
+//     lang: "English",
+//     abbr: "eng",
+//   },
+// ];
 
 const Transcript = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(
-    LANGUAGES[0].abbr
-  );
+  // const [selectedLanguage, setSelectedLanguage] = useState<string>(
+  //   LANGUAGES[0].abbr
+  // );
 
   return (
     <div>
-      <h2 className="text-h5 mb-4 text-primary-700">Transcript</h2>
+      {/* <h2 className="text-h5 mb-4 text-primary-700">Transcript</h2>
       <form>
         <select
           className="pl-2 pr-4 py-2 border border-[#CFCFCF] rounded text-primary-300 focus:outline-primary-100"
@@ -47,8 +29,9 @@ const Transcript = () => {
             </option>
           ))}
         </select>
-      </form>
-      <div className="flex flex-col gap-y-4 h-[300px] overflow-y-auto pr-2 mt-8 relative">
+      </form> */}
+      <p>Transcript is currently unavailable. Please try again another time.</p>
+      {/* <div className="flex flex-col gap-y-4 h-[300px] overflow-y-auto pr-2 mt-8 relative">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur
           dolores doloribus aspernatur temporibus reiciendis unde sapiente,
@@ -109,7 +92,7 @@ const Transcript = () => {
           ipsam aliquid nostrum voluptatibus atque rem soluta repellat.
           Molestias, possimus in?
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
