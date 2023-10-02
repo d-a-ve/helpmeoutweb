@@ -1,0 +1,1 @@
+This is the web app for the [Help Me out Chrome Extension](https://github.com/d-a-ve/helpmeoutcrx) for zuri x hng stage 5 task.
