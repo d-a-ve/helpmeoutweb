@@ -2,7 +2,7 @@ import ButtonWithIcon from "@components/Button/ButtonWithIcon";
 import PrimaryButton from "@components/Button/PrimaryButton";
 import { FormHeader } from "@components/Form/FormHeader";
 import { FormWrapper } from "@components/Form/FormWrapper";
-import AuthHeader from "@components/Header/AuthHeader";
+import AuthHeader from "@components/Header/Header";
 import Input from "@components/Input/Input";
 import AuthLayout from "@components/Layout/AuthLayout";
 

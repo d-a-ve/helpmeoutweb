@@ -16,7 +16,7 @@ const ResponsiveNav = () => {
         </li>
         <li className="mt-2">
           <LinkPrimaryButton
-            to="/auth"
+            to="/"
             buttonText="Get Started"
             className="w-full"
           />

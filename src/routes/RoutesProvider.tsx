@@ -17,7 +17,7 @@ const router = createBrowserRouter(
       <Route element={<PageLayout />}>
         <Route path="/videos/:videoId" element={<Video />} />
       </Route>
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/" element={<Auth />} />
       <Route path="/dashboard/my-videos" element={<Dashboard />} />
     </>
   )

@@ -49,7 +49,7 @@ const Modal = () => {
 
                     <p className="mt-6 text-xxs text-gray-500">
                       Don&apos;t have an account?{" "}
-                      <Link to="/auth" className="text-primary font-semibold">
+                      <Link to="/" className="text-primary font-semibold">
                         Create account
                       </Link>
                     </p>

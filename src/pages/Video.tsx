@@ -24,7 +24,7 @@ const Video = () => {
 
           <p className="mt-6">
             Don&apos;t have an account?{" "}
-            <Link to="/auth" className="decoration">
+            <Link to="/" className="decoration">
               Create account
             </Link>
           </p>

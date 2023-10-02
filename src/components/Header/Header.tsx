@@ -30,7 +30,7 @@ const Header = () => {
           </div>
 
           <div className="md:hidden">
-            <LinkPrimaryButton to="/auth" buttonText="Get Started" />
+            <LinkPrimaryButton to="/" buttonText="Get Started" />
           </div>
           <div
             className="hidden flex-col gap-1 cursor-pointer md:flex"
