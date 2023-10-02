@@ -32,7 +32,6 @@ const SOCIALS = [
 
 const VideoEdit = () => {
   const { videoId } = useParams();
-  const [test, setTest] = useState(false);
   const { setIsModalOpen } = useModalSetter();
   const isLaptop = useMediaQuery({ maxDeviceWidth: 1024 });
 
@@ -41,9 +40,6 @@ const VideoEdit = () => {
 
   return (
     <section className="px-page-layout flex gap-x-10 lg:flex-col">
-      <button onClick={() => setTest((prev) => !prev)}>
-        {test ? "Show" : "hide"}
-      </button>
       <div className="w-1/2 lg:w-full flex flex-col gap-8">
         <h1 className="text-primary-700 text-h4">Your video is ready!</h1>
         <Modal />
