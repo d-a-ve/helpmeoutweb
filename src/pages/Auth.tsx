@@ -22,13 +22,13 @@ const Auth = () => {
               type="button"
               buttonText="Continue with Google"
               className="btn-secondary w-full"
-              iconUrl="assets/svg/google.svg"
+              iconUrl="/assets/svg/google.svg"
             />
             <ButtonWithIcon
               type="button"
               buttonText="Continue with Facebook"
               className="btn-secondary w-full"
-              iconUrl="assets/svg/facebook.svg"
+              iconUrl="/assets/svg/facebook.svg"
             />
           </div>
 

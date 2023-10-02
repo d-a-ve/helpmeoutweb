@@ -28,7 +28,7 @@ const Modal = () => {
             <div className="text-center">
               <div>
                 <img
-                  src="assets/svg/success-kite.svg"
+                  src="/assets/svg/success-kite.svg"
                   alt="A success kite"
                   className="w-40 h-40 mx-auto mb-4 -mt-8"
                 />

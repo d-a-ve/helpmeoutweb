@@ -21,15 +21,15 @@ import VideoPlayer from "./VideoPlayer";
 const SOCIALS = [
   {
     name: "facebook",
-    imgUrl: "assets/svg/facebook.svg",
+    imgUrl: "/assets/svg/facebook.svg",
   },
   {
     name: "whatsApp",
-    imgUrl: "assets/svg/whatsapp.svg",
+    imgUrl: "/assets/svg/whatsapp.svg",
   },
   {
     name: "telegram",
-    imgUrl: "assets/svg/telegram.svg",
+    imgUrl: "/assets/svg/telegram.svg",
   },
 ];
 
